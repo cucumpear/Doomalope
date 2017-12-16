@@ -11,15 +11,26 @@
       <ComfyTemperatureMin>-15</ComfyTemperatureMin>
       <MarketValue>450</MarketValue>
     </statBases>
-    <verbs>
-      <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.75</defaultCooldownTime>
-        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+    <comps>
+      <li Class="CompProperties_Milkable">
+        <milkDef>Chemfuel</milkDef>
+        <milkIntervalDays>2</milkIntervalDays>
+        <milkAmount>30</milkAmount>
+        <milkFemaleOnly>false</milkFemaleOnly>
       </li>
-    </verbs>
+    </comps>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.65</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <commonality>0.2</commonality>
+      </li>
+    </tools>
     <race>
       <body>QuadrupedAnimalWithHoovesAndHump</body>
       <deathActionWorkerClass>Doomalope.DeathActionWorker_HugeExplosion</deathActionWorkerClass>
